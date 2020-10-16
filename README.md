@@ -1,6 +1,9 @@
 # Computational-Thinking-Code
 
+##Project Title
+Hangman Project
 
+##How To Get Started
 import random
 
 ## This function selects a random word from an imported txt file
@@ -15,7 +18,7 @@ def get_word():
         listOfWord.append(line.rstrip('\n'))
     return random.choice(listOfWord) ##returns a random word from the list
 
-This utility is used for selecting a word to be used within the game. We imported a text file off of the internet, which consists of 45,000 used English words.  This program sorts through the list of words, and selects one of those words at random.  This becomes the word that the player has to guess during the game.
+##This utility is used for selecting a word to be used within the game. We imported a text file off of the internet, which consists of 45,000 used English words.  This program sorts through the list of words, and selects one of those words at random.  This becomes the word that the player has to guess during the game.
 
 
 
@@ -79,7 +82,7 @@ def play_hangman():
             print('Sorry, you are out of guesses and did not guess the word.')
             print ("The word was:" + word )
 
-	This function is the entirety of the game.  This function takes the selected word from the function above it, and makes that the target for the player to reach.  The len function shows the player the amount of letters that the randomly selected word consists of.  We gave the player the ability to guess a letter from the alphabet, and if they guessed correctly, we gave them a message stating that letter is in the word.  If they guess the wrong letter, we tell them the letter is not in the word through the incorrectLetters function.  After every failed guess attempt, we subtract one try from their number of attempts using our drawMan function.  When the player guesses the correct word or guesses every letter in the word, we give an output message stating that the player has won the game.  If the player attempts to guess the word but fails, we allow the player to continue playing until the user runs out of attempts.  Once the user is out of guesses and fails to discover the word, we produce a statement saying they lost the game and we state what the word was.
+###	This function is the entirety of the game.  This function takes the selected word from the function above it, and makes that the target for the player to reach.  The len function shows the player the amount of letters that the randomly selected word consists of.  We gave the player the ability to guess a letter from the alphabet, and if they guessed correctly, we gave them a message stating that letter is in the word.  If they guess the wrong letter, we tell them the letter is not in the word through the incorrectLetters function.  After every failed guess attempt, we subtract one try from their number of attempts using our drawMan function.  When the player guesses the correct word or guesses every letter in the word, we give an output message stating that the player has won the game.  If the player attempts to guess the word but fails, we allow the player to continue playing until the user runs out of attempts.  Once the user is out of guesses and fails to discover the word, we produce a statement saying they lost the game and we state what the word was.
 	We have implemented multiple precautions for error handling.  For any special characters or numbers that are typed in, we wanted to produce an error message to limit the guesses to letters only.  Also, we produce an error message for any letter that has been previously guessed in order to prevent tries to be lost over repeat letters.  When the player attempts to guess the complete word, if the guess does not match the length of the word, we want to warn the player that it does not have the same amount of letters.  
 
 Utilities3.py
@@ -92,10 +95,10 @@ This function is used to give a letter bank for the user to refer to while playi
 
 Utilities4.py
 
-##This function draws the hangman board for each incorrect
+##Hangman Board
 def drawMan (tries):
     while True:
-        if tries == 7:
+•	if tries == 7:
             print('    ____')
             print('   |     ')
             print('   |     ')
@@ -108,7 +111,7 @@ def drawMan (tries):
             break
         
             
-        if tries == 6:
+•	if tries == 6:
             print('    ____')
             print('   |   |')
             print('   |     ')
@@ -121,7 +124,7 @@ def drawMan (tries):
             break   
         
         
-        if tries == 5:
+•	if tries == 5:
             print('    ____')
             print('   |   |')
             print('   |   O')
@@ -134,7 +137,7 @@ def drawMan (tries):
             break
         
         tries-=1
-        if tries == 4:
+•	if tries == 4:
             print('    ____')
             print('   |   |')
             print('   |   O')
@@ -147,7 +150,7 @@ def drawMan (tries):
             break
         
         
-        if tries == 3:
+•	if tries == 3:
             print('    ____')
             print('   |   |')
             print('   |   O')
@@ -160,7 +163,7 @@ def drawMan (tries):
             break
         
         
-        if tries == 2:
+•	if tries == 2:
             print('    ____')
             print('   |   |')
             print('   |   O')
@@ -173,7 +176,7 @@ def drawMan (tries):
             break
         
         
-        if tries == 1:
+•	if tries == 1:
             print('    ____')
             print('   |   |')
             print('   |   O')
@@ -186,7 +189,7 @@ def drawMan (tries):
             break
         
         
-        if tries == 0:
+•	if tries == 0:
             print('    ____')
             print('   |   |')
             print('   |   O')
@@ -199,7 +202,7 @@ def drawMan (tries):
             break
         
         
-        if tries ==-1:
+•	if tries ==-1:
             print('    ____')
             print('   |   |')
             print('   |   O')
@@ -209,3 +212,4 @@ def drawMan (tries):
             print('   |GAME OVER!')
             print(' -----   ')
             break
+
