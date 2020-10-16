@@ -79,16 +79,14 @@ def play_hangman():
             print ("The word was:" + word )
  
 
-Utilities3.py
-
-##This function will display the incorrect letters that the user previously attempted to guess
+## Displaying the incorrect letters
 def incorrectLetters(guess):
     print ("The incorrect letters you have guessed are: " +str(guess))
 
 
 Utilities4.py
 
-##Hangman Board
+## Hangman Board
 def drawMan (tries):
     while True:
 •	if tries == 7:
