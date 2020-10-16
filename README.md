@@ -84,7 +84,6 @@ def incorrectLetters(guess):
     print ("The incorrect letters you have guessed are: " +str(guess))
 
 
-Utilities4.py
 
 ## Hangman Board
 def drawMan (tries):
