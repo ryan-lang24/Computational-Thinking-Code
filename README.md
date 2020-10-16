@@ -1,7 +1,7 @@
 # Computational-Thinking-Code
 
-##Project Title
-Hangman Project
+## Project Title
+"Hangman Project"
 
 import random
 
@@ -18,7 +18,6 @@ def get_word():
     return random.choice(listOfWord) ##returns a random word from the list
 
 
- Utilities2.py
 
 ## This function is used to start the actual game itself
 def play_hangman():
